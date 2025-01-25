@@ -4,6 +4,7 @@ kind: JoinConfiguration
 discovery:
   bootstrapToken:
     apiServerEndpoint: 192.168.10.2:6443
+    # tokenとcaCertHashesは変更する必要あり
     token: "pwt5wg.ykgtpues6hfs7oh5"
     caCertHashes:
     - "sha256:812a1201f399bf82612fa73fe0cb825de134318451a316525de15e8ece67a9c7"
