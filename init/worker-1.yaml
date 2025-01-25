@@ -1,0 +1,14 @@
+# ubuntu2 nodeの設定
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: JoinConfiguration
+discovery:
+  bootstrapToken:
+    apiServerEndpoint: 192.168.10.2:6443
+    token: "pwt5wg.ykgtpues6hfs7oh5"
+    caCertHashes:
+    - "sha256:812a1201f399bf82612fa73fe0cb825de134318451a316525de15e8ece67a9c7"
+    # change auth info above to match the actual token and CA certificate hash for your cluster
+nodeRegistration:
+  kubeletExtraArgs:
+    node-ip: 192.168.10.3
+  criSocket: unix://var/run/crio/crio.sock
